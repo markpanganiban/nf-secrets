@@ -3,13 +3,14 @@ nextflow.enable.dsl=2
 params.email = 'mark.panganiban@outlook.com'
 
 process someTask {
-  secret 'FOO'
-  secret 'BAR'
+  secret 'ATHENA_USER'
+  secret 'ATHENA_PASSWORD'
+  secret 'MAIL_PASSWORD'
   output: 
      stdout 
   script:
   '''
-    echo "Secrets phrase: $FOO $BAR"
+    echo "Secrets phrase: $ATHENA_USER $ATHENA_PASSWORD"
   '''
 }
 
