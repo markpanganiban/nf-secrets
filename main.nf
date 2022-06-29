@@ -5,7 +5,7 @@ params.email = 'mark.panganiban@outlook.com'
 process someTask {
   secret 'ATHENA_USER'
   secret 'ATHENA_PASSWORD'
-  secret 'MAIL_USER'
+  secret 'MAIL_NAME'
   secret 'MAIL_ADD'
   secret 'MAIL_PASSWORD'
   output: 
