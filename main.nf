@@ -6,11 +6,13 @@ process someTask {
   secret 'ATHENA_USER'
   secret 'ATHENA_PASSWORD'
   secret 'MAIL_USER'
+  secret 'MAIL_ADD'
+  secret 'MAIL_PASSWORD'
   output: 
      stdout 
   script:
   '''
-    echo "Secrets phrase: $ATHENA_USER $ATHENA_PASSWORD $MAIL_USER"
+    echo "Secrets phrase: $ATHENA_USER $ATHENA_PASSWORD $MAIL_USER $MAIL_ADD $MAIL_PASSWORD"
   '''
 }
 
