@@ -1,6 +1,6 @@
 nextflow.enable.dsl=2
 
-params.email = 'mark.panganiban@outlook.com'
+params.email = 'support@itsmp.xyz'
 
 process someTask {
   secret 'ATHENA_USER'
