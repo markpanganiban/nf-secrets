@@ -5,12 +5,12 @@ params.email = 'mark.panganiban@outlook.com'
 process someTask {
   secret 'ATHENA_USER'
   secret 'ATHENA_PASSWORD'
-  secret 'MAIL_PASSWORD'
+  secret 'MAIL_USE'
   output: 
      stdout 
   script:
   '''
-    echo "Secrets phrase: $ATHENA_USER $ATHENA_PASSWORD"
+    echo "Secrets phrase: $ATHENA_USER $ATHENA_PASSWORD $MAIL_USER"
   '''
 }
 
