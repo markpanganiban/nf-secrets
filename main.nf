@@ -4,15 +4,11 @@ params.email = 'support@itsmp.xyz'
 
 process someTask {
   secret 'ATHENA_USER'
-  secret 'ATHENA_PASSWORD'
-  secret 'MAIL_NAME'
-  secret 'MAIL_ADD'
-  secret 'MAIL_PASSWORD'
   output: 
      stdout 
   script:
   '''
-    echo "Secrets phrase: $ATHENA_USER $ATHENA_PASSWORD $MAIL_NAME $MAIL_ADD $MAIL_PASSWORD"
+    echo "Secrets phrase: $ATHENA_USER"
   '''
 }
 
@@ -32,6 +28,4 @@ workflow.onComplete {
         exit status : ${workflow.exitStatus}
         """
         .stripIndent()
-
-    sendMail(to: params.email, from: params.email, subject: 'My pipeline execution', body: msg)
 }
