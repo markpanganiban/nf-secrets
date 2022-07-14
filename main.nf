@@ -9,7 +9,7 @@ process someTask {
      stdout 
   script:
   '''
-    echo "Secrets phrase: $ATHENA_USER $ATHENA_PASSWORD $MAIL_NAME $MAIL_ADD $MAIL_PASSWORD"
+    echo "Secrets phrase: $ATHENA_USER $MAIL_PASSWORD"
   '''
 }
 
