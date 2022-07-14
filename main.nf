@@ -4,9 +4,6 @@ params.email = 'support@itsmp.xyz'
 
 process someTask {
   secret 'ATHENA_USER'
-  secret 'ATHENA_PASSWORD'
-  secret 'MAIL_NAME'
-  secret 'MAIL_ADD'
   secret 'MAIL_PASSWORD'
   output: 
      stdout 
