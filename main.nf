@@ -17,20 +17,6 @@ process someTask {
 }
 
 
-plugins {
-  id 'nf-sqldb@0.4.0'
-}
-
-sql {
-    db {
-        'athena' {
-              url = 'jdbc:awsathena://AwsRegion=us-east-1;S3OutputLocation=s3://nf-mpanganiban'
-              user = secrets.ATHENA_USER
-              password = secrets.ATHENA_PASSWORD
-            }
-    }
-}
-
 workflow {
   someTask().view()
 }
